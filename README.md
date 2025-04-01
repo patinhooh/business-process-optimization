@@ -6,7 +6,7 @@ This repository contains BPMN models and related artifacts for our Camunda-based
 
 - Schemas: [Excalidraw Room](https://excalidraw.com/#room=a420a5c83755145b3c3b,QCVBFN52nr791UkEUXahSw)
 
-## Camunda Web Modeler
+## 🌐 Camunda Web Modeler
 
 - Open **Camunda Web Modeler:** [Camunda Web Modeler](https://modeler.camunda.io/)
 

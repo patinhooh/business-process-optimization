@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="e7bcff8" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.6.0">
+  <bpmn:process id="Process_1hzet3w" name="SIE - Business Process Organization" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="receção do produto">
+      <bpmn:outgoing>Flow_1hqiwsa</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:subProcess id="Activity_0tu7zgt" name="verificar produto">
+      <bpmn:incoming>Flow_1hqiwsa</bpmn:incoming>
+      <bpmn:sequenceFlow id="Flow_03kojsj" sourceRef="Activity_10kd4qc" targetRef="Activity_10flnwl" />
+      <bpmn:sequenceFlow id="Flow_1mw6ntx" sourceRef="Activity_10flnwl" targetRef="Activity_12gexpp" />
+      <bpmn:userTask id="Activity_12gexpp" name="verificar o estado de conformidade de acordo com o documento do Fornecedor">
+        <bpmn:extensionElements>
+          <zeebe:userTask />
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1mw6ntx</bpmn:incoming>
+      </bpmn:userTask>
+      <bpmn:userTask id="Activity_10flnwl" name="verificar a quantidade de acordo com o documento do Fornecedor">
+        <bpmn:extensionElements>
+          <zeebe:userTask />
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_03kojsj</bpmn:incoming>
+        <bpmn:outgoing>Flow_1mw6ntx</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="Activity_10kd4qc" name="verificar com base nas ECF">
+        <bpmn:extensionElements>
+          <zeebe:userTask />
+        </bpmn:extensionElements>
+        <bpmn:outgoing>Flow_03kojsj</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:task id="Activity_0o4n38u" />
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="Flow_1hqiwsa" sourceRef="StartEvent_1" targetRef="Activity_0tu7zgt" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1hzet3w">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="150" y="100" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="141" y="143" width="55" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0tu7zgt_di" bpmnElement="Activity_0tu7zgt">
+        <dc:Bounds x="280" y="78" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1hqiwsa_di" bpmnElement="Flow_1hqiwsa">
+        <di:waypoint x="186" y="118" />
+        <di:waypoint x="280" y="118" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1e2a1gt">
+    <bpmndi:BPMNPlane id="BPMNPlane_1bhyzmj" bpmnElement="Activity_0tu7zgt">
+      <bpmndi:BPMNShape id="Activity_100azr0_di" bpmnElement="Activity_12gexpp">
+        <dc:Bounds x="590" y="150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_06xo11i_di" bpmnElement="Activity_10flnwl">
+        <dc:Bounds x="390" y="150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wcyxco_di" bpmnElement="Activity_10kd4qc">
+        <dc:Bounds x="210" y="150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0o4n38u_di" bpmnElement="Activity_0o4n38u">
+        <dc:Bounds x="780" y="150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_03kojsj_di" bpmnElement="Flow_03kojsj">
+        <di:waypoint x="310" y="190" />
+        <di:waypoint x="390" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1mw6ntx_di" bpmnElement="Flow_1mw6ntx">
+        <di:waypoint x="490" y="190" />
+        <di:waypoint x="590" y="190" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

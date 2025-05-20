@@ -1,16 +1,16 @@
-# 📘 Camunda Process Repository
-
-This repository contains BPMN models and related artifacts for our Camunda-based workflow automation.
+# 📘 SIE Project Processes Repository
 
 ## ✏️ Excalidraw
 
 - Schemas: [Excalidraw Room](https://excalidraw.com/#room=a420a5c83755145b3c3b,QCVBFN52nr791UkEUXahSw)
 
-## 🌐 Camunda Web Modeler
+## 🌐 Software & Docs
 
 - Open **Camunda Web Modeler:** [Camunda Web Modeler](https://modeler.camunda.io/)
+- Download **Bonita Software:** [Bonita Software](https://www.bonitasoft.com/downloads)
+- Docs **Bonita Software:** [Bonita Docs](https://documentation.bonitasoft.com/bonita/latest/)
 
-## 📄 Documentation
+## 📄 Project Docs
 
 - **Project Description:**  [project-description.pdf](docs/project-description.pdf)
 - **Project Requirements:** [requirements.pdf](docs/requirements.pdf)
@@ -19,21 +19,17 @@ This repository contains BPMN models and related artifacts for our Camunda-based
 
 ```text
 📂 bpo/
-│── 📂 docs/
-│    ├── enunciado.pdf  # Project description
-│    ├── requirements.pdf  # Project requirements
+├── 📂 camunda/
+│   ├── process-1.bpmn
+│   └── ...
 │
-│── 📂 models/
-│    ├── 📂 process-1/
-│    │    ├── process-1.bpmn
-│    │    ├── process-1-form.form
-│    │    ├── process-1-decision.dmn
-│    │
-│    ├── 📂 process-2/
-│         ├── process-2.bpmn
-│         ├── process-2-form.form
-│         ├── process-2-decision.dmn
+├── 📂 bonita/  # Submodule
+│   └── ...
 │
-│── README.md
-│── .gitignore
+├── 📂 docs/
+│   ├── enunciado.pdf     # Project description
+│   └── requirements.pdf  # Project requirements
+│
+├── README.md
+└── .gitignore
 ```

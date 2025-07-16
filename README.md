@@ -14,11 +14,11 @@
 
 ```text
 📂 bpo/
-├── 📂 camunda/
-│   ├── process-1.bpmn
+├── 📂 bonita/  # Submodule
 │   └── ...
 │
-├── 📂 bonita/  # Submodule
+├── 📂 camunda/
+│   ├── process-1.bpmn
 │   └── ...
 │
 ├── 📂 docs/

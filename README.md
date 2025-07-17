@@ -22,8 +22,8 @@
 │   └── ...
 │
 ├── 📂 docs/
-│   ├── project-description.pdf  # Project description
-│   └── requirements.pdf         # Project requirements
+│   ├── project-description.pdf  # Project Description
+│   └── requirements.pdf         # Project Requirements
 │
 ├── README.md
 └── .gitignore
